@@ -49,7 +49,7 @@ class HaskellCompletionContributor extends CompletionContributor {
   private final val HaskellDefault = Stream("default")
   private final val HaskellImportKeywords = Stream("import", "qualified", "as", "hiding")
   private final val HaskellForeignKeywords = Stream("foreign", "export", "ccall", "safe", "unsafe", "interruptible", "capi", "prim")
-  private final val HaskellKeyword = Stream("do", "case", "of")
+  private final val HaskellKeyword = Stream("do", "case", "of", "template")
   private final val HaskellStatic = Stream("static")
   private final val HaskellConditional = Stream("if", "then", "else")
   private final val HaskellInfix = Stream("infix", "infixl", "infixr")

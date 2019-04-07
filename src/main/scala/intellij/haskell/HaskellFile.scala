@@ -44,7 +44,7 @@ class HaskellFile(viewProvider: FileViewProvider) extends PsiFileBase(viewProvid
 object HaskellFileType {
   final val Instance: HaskellFileType = new HaskellFileType
 
-  final val HaskellFileExtension = "hs"
+  final val HaskellFileExtension = "daml"
 }
 
 class HaskellFileType extends LanguageFileType(HaskellLanguage.Instance) {

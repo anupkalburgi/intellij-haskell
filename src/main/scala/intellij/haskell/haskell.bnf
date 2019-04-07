@@ -131,7 +131,7 @@ text_literal                ::= STRING_LITERAL
 
 private literal             ::= DECIMAL | HEXADECIMAL | OCTAL | FLOAT | CHARACTER_LITERAL | text_literal
 
-private keyword             ::= DATA | CLASS | INSTANCE | NEWTYPE | DERIVING | DEFAULT | TYPE_FAMILY | TYPE | TYPE_INSTANCE | IMPORT | MODULE
+private keyword             ::= DATA | CLASS | INSTANCE | NEWTYPE | DERIVING | DEFAULT | TYPE_FAMILY | TYPE | TYPE_INSTANCE | IMPORT | MODULE | TEMPLATE | CONTROLLER
 
 private onl                 ::= (DIRECTIVE? NEWLINE)*
 private onls                ::= (&<<containsSpaces>> NEWLINE | DIRECTIVE NEWLINE !keyword)*       // optional multiple (new line and spaces)
@@ -257,4 +257,4 @@ private general_id          ::= QUASIQUOTE | q_name | symbol_reserved_op | reser
 dot_dot                     ::= DOT DOT
 private symbol_reserved_op  ::= dot_dot | COLON_COLON | EQUAL | BACKSLASH | VERTICAL_BAR | LEFT_ARROW | RIGHT_ARROW | AT | TILDE | DOUBLE_RIGHT_ARROW
 
-reserved_id                 ::= CASE | CLASS | DATA | DEFAULT | DERIVING | DO | ELSE | IF | IMPORT | IN | INSTANCE | LET | MODULE | NEWTYPE | OF | THEN | TYPE | WHERE | UNDERSCORE
+reserved_id                 ::= CASE | CLASS | DATA | DEFAULT | DERIVING | DO | ELSE | IF | IMPORT | IN | INSTANCE | LET | MODULE | NEWTYPE | OF | THEN | TYPE | WHERE | UNDERSCORE | TEMPLATE | CONTROLLER
