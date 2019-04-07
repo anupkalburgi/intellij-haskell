@@ -4263,7 +4263,7 @@ public class HaskellParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // DATA | CLASS | INSTANCE | NEWTYPE | DERIVING | DEFAULT | TYPE_FAMILY | TYPE | TYPE_INSTANCE | IMPORT | MODULE | TEMPLATE | CONTROLLER
+  // DATA | CLASS | INSTANCE | NEWTYPE | DERIVING | DEFAULT | TYPE_FAMILY | TYPE | TYPE_INSTANCE | IMPORT | MODULE | TEMPLATE | CONTROLLER | CHOICE | WITH
   static boolean keyword(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "keyword")) return false;
     boolean r;
@@ -4280,6 +4280,8 @@ public class HaskellParser implements PsiParser, LightPsiParser {
     if (!r) r = consumeToken(b, HS_MODULE);
     if (!r) r = consumeToken(b, HS_TEMPLATE);
     if (!r) r = consumeToken(b, HS_CONTROLLER);
+    if (!r) r = consumeToken(b, HS_CHOICE);
+    if (!r) r = consumeToken(b, HS_WITH);
     return r;
   }
 
@@ -5164,7 +5166,7 @@ public class HaskellParser implements PsiParser, LightPsiParser {
   }
 
   /* ********************************************************** */
-  // CASE | CLASS | DATA | DEFAULT | DERIVING | DO | ELSE | IF | IMPORT | IN | INSTANCE | LET | MODULE | NEWTYPE | OF | THEN | TYPE | WHERE | UNDERSCORE | TEMPLATE | CONTROLLER
+  // CASE | CLASS | DATA | DEFAULT | DERIVING | DO | ELSE | IF | IMPORT | IN | INSTANCE | LET | MODULE | NEWTYPE | OF | THEN | TYPE | WHERE | UNDERSCORE | TEMPLATE | CONTROLLER | CHOICE | WITH
   public static boolean reserved_id(PsiBuilder b, int l) {
     if (!recursion_guard_(b, l, "reserved_id")) return false;
     boolean r;
@@ -5190,6 +5192,8 @@ public class HaskellParser implements PsiParser, LightPsiParser {
     if (!r) r = consumeToken(b, HS_UNDERSCORE);
     if (!r) r = consumeToken(b, HS_TEMPLATE);
     if (!r) r = consumeToken(b, HS_CONTROLLER);
+    if (!r) r = consumeToken(b, HS_CHOICE);
+    if (!r) r = consumeToken(b, HS_WITH);
     exit_section_(b, l, m, r, false, null);
     return r;
   }

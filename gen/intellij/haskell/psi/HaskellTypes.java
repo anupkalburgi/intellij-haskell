@@ -101,6 +101,7 @@ public interface HaskellTypes {
   IElementType HS_BACKSLASH = new HaskellTokenType("BACKSLASH");
   IElementType HS_CASE = new HaskellTokenType("CASE");
   IElementType HS_CHARACTER_LITERAL = new HaskellTokenType("CHARACTER_LITERAL");
+  IElementType HS_CHOICE = new HaskellTokenType("CHOICE");
   IElementType HS_CLASS = new HaskellTokenType("CLASS");
   IElementType HS_COLON_COLON = new HaskellTokenType("COLON_COLON");
   IElementType HS_COMMA = new HaskellTokenType("COMMA");
@@ -170,6 +171,7 @@ public interface HaskellTypes {
   IElementType HS_VAR_ID = new HaskellTokenType("VAR_ID");
   IElementType HS_VERTICAL_BAR = new HaskellTokenType("VERTICAL_BAR");
   IElementType HS_WHERE = new HaskellTokenType("WHERE");
+  IElementType HS_WITH = new HaskellTokenType("WITH");
 
   class Factory {
     public static PsiElement createElement(ASTNode node) {

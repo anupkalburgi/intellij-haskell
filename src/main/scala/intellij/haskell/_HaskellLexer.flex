@@ -314,6 +314,8 @@ nhaddock_start      = {left_brace}{dash}{white_char}?{vertical_bar}
     "where"               { return HS_WHERE; }
     "template"            { return HS_TEMPLATE; }
     "controller"          { return HS_CONTROLLER; }
+    "choice"              { return HS_CHOICE; }
+    "with"                { return HS_WITH; }
     "_"                   { return HS_UNDERSCORE; }
 
     // identifiers
