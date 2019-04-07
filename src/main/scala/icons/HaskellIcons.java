@@ -7,7 +7,7 @@ import javax.swing.*;
 
 public interface HaskellIcons {
   @NotNull Icon HaskellLogo = IconLoader.getIcon("/icons/haskell@16.png");
-  @NotNull Icon HaskellFileLogo = IconLoader.getIcon("/icons/hs.png");
+  @NotNull Icon HaskellFileLogo = IconLoader.getIcon("/icons/da-icon.png");
   @NotNull Icon HaskellSmallBlueLogo = IconLoader.getIcon("/icons/haskell-blue@16.png");
 
   @NotNull Icon Module = IconLoader.getIcon("/icons/module.png");
